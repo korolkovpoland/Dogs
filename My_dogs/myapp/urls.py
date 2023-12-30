@@ -20,5 +20,5 @@ from . import views
 
 
 urlpatterns = [
-    path('dogs', views.dogs, name='junior')
+    path('', views.dogs, name='junior')
 ]
