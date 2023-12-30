@@ -1,0 +1,18 @@
+{% extends "myapp/Main.html" %}
+
+{% block header %}Dogs{% endblock %}
+
+{% block content %}
+<div class="sm:text-center lg:text-left">
+    <h1 class="text-4xl font-extrabold text-gray-800 sm:text-5x1 md:text-6xl">DOGS is your friends</h1></p></p>
+    {% for item in items %}
+        <p class="font-bold text-xl mb-1">{{ item.name }}</p>
+        <p class="font-bold text-xl text-green-500 mb-1">$ {{ item.price }}</p>
+        <p class="font-bold text-xl text-gray-700 mb-1">{{ item.description }}</p>
+        <img src="{{ item.images.url }}" alt="Dogs_img"></br>
+        <audio controls>
+            <source src="{{ item.mp3_file.url }}" type="audio/mp3">
+        </audio></br></br>
+    </div>
+    {% endfor %}
+{% endblock %}
