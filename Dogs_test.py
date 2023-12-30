@@ -2,6 +2,7 @@ import requests
 import webbrowser
 
 def image():
+    
     try:
         response = requests.get("https://dog.ceo/api/breeds/image/random")
 
